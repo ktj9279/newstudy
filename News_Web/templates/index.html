@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-js">
+
+	<head>
+		<meta charset="utf-8">
+		<title>NewStory</title>
+		<meta name="description" content="The description should optimally be between 150-160 characters.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="ThemeHelite">
+
+        <!-- ================= Favicons ================== -->
+        <!-- Standard -->
+        <link rel="shortcut icon" href="static/img/favicon.png">
+        <!-- Retina iPad Touch Icon-->
+        <link rel="apple-touch-icon" sizes="144x144" href="static/img/favicon-retina-ipad.png">
+        <!-- Retina iPhone Touch Icon-->
+        <link rel="apple-touch-icon" sizes="114x114" href="static/img/favicon-retina-iphone.png">
+        <!-- Standard iPad Touch Icon--> 
+        <link rel="apple-touch-icon" sizes="72x72" href="static/img/favicon-standard-ipad.png">
+        <!-- Standard iPhone Touch Icon--> 
+        <link rel="apple-touch-icon" sizes="57x57" href="static/img/favicon-standard-iphone.png">
+
+		<!-- ============== Resources style ============== -->
+		<link rel="stylesheet" type="text/css" href="static/css/style.css" />
+	</head>
+
+	<body>
+
+		<!-- +++ 로딩 페이지 +++ -->
+		<div id="loading">
+            		
+			<div id="preloader" class="animated-middle">
+				
+				<!-- Your logo -->
+				<img src="static/img/logo.png" alt="" class="loading-logo" />
+
+				<span class="loading-text">Loading from the space</span>
+
+				<span class="load">
+					<span class="loading-dot"></span>
+					<span class="loading-dot"></span>
+					<span class="loading-dot"></span>
+					<span class="loading-dot"></span>
+				</span>
+
+			</div>
+
+		</div>
+
+		<!-- +++ START - Fullpage sections +++ -->
+		<div id="fullpage">
+
+			<!-- +++ START - Home +++ -->
+			<div class="section" id="section0">
+
+				<!-- Background slideshow & light overlay -->
+				<div class="slideshow-home vegas-container" style="height: 651px;">
+
+                </div>
+
+				<div class="slide-overlay"></div>
+
+				<div class="intro">
+					<!-- Big title  -->
+					<h1 class="open-anim opacity-0">NewStory</h1>
+					<p class="open-anim opacity-0"><strong>뉴스 스토리</strong></p>
+
+					<!-- Line 1695 in js/jquery.fullpage.js is the place to select the anchor scrolling to the section of your choice -->
+					<a id="button-more" class="light-btn open-anim opacity-0">{{ keyword[0] }}</a>
+
+                    <!-- +++ Button used for opening the newsletter panel +++ -->
+                    <a id="open-newsletter" class="action-btn">키워드 검색</a>
+
+                    <a id="button-more2" class="light-btn open-anim opacity-0">{{ keyword[1] }}</a>
+				</div>
+
+			</div>
+			<!-- +++ END - Home +++ -->
+
+			<!-- +++ START - About +++ -->
+			<div class="section" id="section1">
+
+				<section id="about" class="text-left-block">
+
+					<div class="row row-no-margin">
+
+						<!-- The id="invert-slideshow" and id="invert-text" are used for the responsive mode under 1025px. With that, the slideshow is displayed after the text, looking better for the user experience. If you don't want to invert these divs, just remove the id.-->
+						<div id="invert-slideshow" class="col-xs-12 col-sm-6 col-lg-6 slideshow-about split-section foo">
+                        </div>
+
+						<div id="invert-text" class="col-xs-12 col-sm-6 col-lg-6 left-center-text split-section">
+
+							<div class="left-center-part foo">
+
+								<h2>Rest is history</h2>
+
+								<p>Lorem ipsum Dolor elit dolor laboris in enim ex ex deserunt consequat irure eu commodo mollit anim minim tempor Excepteur pariatur sit ut voluptate amet eiusmod aute et occaecat incididunt aute sit cupidatat dolore enim proident laboris est dolor commodo ullamco in reprehenderit sit tempor nisi nulla in ex deserunt esse ullamco dolore nostrud pariatur magna cillum commodo nisi sunt mollit elit aliquip eu sunt irure sint enim in Duis ullamco elit Duis veniam ex esse labore ex fugiat aute nostrud ullamco est laborum aliqua Duis eiusmod nostrud consequat pariatur eiusmod in culpa laboris dolore qui magna irure non veniam ut cillum nisi commodo enim eiusmod aute ex in officia amet proident irure dolore Ut qui aliquip labore ea tempor amet culpa irure nulla consectetur sed proident cillum voluptate cillum cillum consectetur occaecat tempor commodo incididunt aute aliquip sunt eu id deserunt magna sint sint nostrud cupidatat incididunt fugiat minim culpa est sint.</p>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</section>
+
+                <!-- Scroll indicator -->
+				<div class="scroll-indicator">
+
+					<!-- Line 1695 in js/jquery.fullpage.js is the place to select the anchor scrolling to the section of your choice -->
+					<a id="indicator-scroll2"><i class="icon ion-ios-arrow-down"></i></a>
+
+				</div>
+
+			</div>
+			<!-- +++ END - About +++ -->
+
+			<!-- +++ START - Services +++ -->
+			<div class="section" id="section2">
+
+				<section id="services" class="text-left-block">
+
+					<div class="row row-no-margin">
+
+						<div class="col-xs-12 col-sm-6 col-lg-6 left-center-text split-section foo">
+
+							<div class="left-center-part">
+
+								<h2 id="showClickedKeyWord">Keyword</h2>
+
+								<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.</p>
+
+								<!-- +++ START - Carousel +++ -->
+								<div id="carousel-services" class="carousel slide" data-interval="6000" data-ride="carousel">
+
+							    	<!-- Carousel indicators -->
+							        <ol class="carousel-indicators">
+							            <li data-target="#carousel-services" data-slide-to="0" class="active"></li>
+							            <li data-target="#carousel-services" data-slide-to="1"></li>
+							        </ol>
+
+							        <!-- START - Wrapper for carousel items -->
+							        <div class="carousel-inner">
+
+							        	<!-- Services 1 , 스크롤 페이지 1-->
+							            <div class="active item">
+
+				                			<!-- START - Services row -->
+											<div class="row">
+
+												<!-- START - Block services -->
+												<div class="col-xs-12 col-sm-6 col-lg-6 block-services" id="recommendNews1">
+
+													<span class="icon-services icon ion-ios-mic-outline"></span>
+
+                                                    <h3><a href="#" class="showNewsContents" title="">뉴스1</a></h3>
+
+													<p>뉴스1 내용 20~30자</p>
+
+												</div> <!-- END - Block services -->
+
+												<!-- START - Block services -->
+												<div class="col-xs-12 col-sm-6 col-lg-6 block-services" id="recommendNews2">
+
+													<span class="icon-services icon ion-ios-flask-outline"></span>
+
+                                                    <h3><a href="#" class="showNewsContents" title="">뉴스2</a></h3>
+
+													<p>뉴스2 내용 20~30자</p>
+
+												</div> <!-- END - Block services -->
+
+											</div> <!-- END - Services row -->
+
+							            </div> <!-- Service 1 End , 스크롤 페이지 1 종료 -->
+
+							            <!-- Services 2, 스크롤 페이지 2-->
+							            <div class="item">
+
+				                			<!-- START - Services row -->
+											<div class="row">
+
+												<!-- START - Block services -->
+												<div class="col-xs-12 col-sm-6 col-lg-6 block-services" id="recommendNews3">
+
+													<span class="icon-services icon ion-ios-navigate-outline"></span>
+                                                    <h3><a href="#" class="showNewsContents" title="">뉴스 3</a></h3>
+
+													<p>뉴스3 내용 20~30자</p>
+
+												</div> <!-- END - Block services -->
+
+												<!-- START - Block services -->
+												<div class="col-xs-12 col-sm-6 col-lg-6 block-services" id="recommendNews4">
+
+													<span class="icon-services icon ion-ios-pulse"></span>
+
+                                                    <h3><a href="#" class="showNewsContents" title="">뉴스 4</a></h3>
+
+													<p>뉴스4 내용 20~30자</p>
+
+												</div> <!-- END - Block services -->
+
+											</div> <!-- END - Services row -->
+
+							            </div>
+
+                                        <!-- 추가하고 싶은 곳은 class=item인 Service 2부분 복사 -->
+							            <!-- Services 3 -->
+
+							        </div>
+							        <!-- END - Wrapper for carousel items -->
+
+							        <!-- Left arrow -->
+							        <a class="carousel-control left" href="#carousel-services" data-slide="prev">
+							            <span class="icon-prev"></span>
+							        </a>
+
+							        <!-- Right arrow -->
+							        <a class="carousel-control right" href="#carousel-services" data-slide="next">
+							            <span class="icon-next"></span>
+							        </a>
+							    
+							    </div>
+							    <!-- +++ END - Carousel +++ -->
+
+						    </div>
+
+						</div>
+
+                        <!-- 뉴스 내용 -->
+                        <div id="newsContents">
+                            <h3 class="innerNews">뉴스 타이틀</h3>
+                            <h5 class="innerNews">뉴스의 내용 100자</h5>
+                            <a id="btn-moveToEntire" onclick="window.open(this.href,'기사보기')" target="_blank">전문보기</a>
+                        </div>
+                    </div>
+
+				</section>
+
+                <!-- Scroll indicator -->
+				<div class="scroll-indicator">
+
+					<!-- Line 1695 in js/jquery.fullpage.js is the place to select the anchor scrolling to the section of your choice -->
+					<a id="indicator-scroll"><i class="icon ion-ios-arrow-down"></i></a>
+
+				</div>
+
+			</div>
+			<!-- +++ END - Services +++ -->
+
+			<!-- +++ START - Portfolio +++ -->
+			<div class="section" id="section3">
+
+		        <section id="portfolio" class="text-left-block">
+
+		        	<div class="col-xs-12 col-sm-6 col-lg-6 split-section no-padding foo">
+
+			            <div class="portfolio sect" itemscope itemtype="http://schema.org/ImageGallery">
+
+			                <!-- 1 -->
+			                <figure class="col-xs-12 col-sm-6 col-lg-6 fooinside" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" title="Politics">
+
+			                    <a href="#" data-image="static/img/politics-gallery.jpg" itemprop="contentUrl" data-size="1920x1280">
+
+			                        <img src="static/img/politics-gallery.jpg" itemprop="thumbnail" alt="This is my work" class="img-responsive gallery-img small-square" />
+
+			                    </a>
+
+			                    <figcaption itemprop="caption description">
+
+			                        <div class="photo-details">
+			                        
+			                            <h4>정치 <small>청와대, 국회, 국방</small></h4>
+
+			                        </div>
+
+			                    </figcaption>
+
+			                </figure>
+
+			                <!-- 2 -->
+			                <figure class="col-xs-12 col-sm-6 col-lg-6 fooinside" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" title="Economics">
+
+			                    <a href="static/img/gallery-3.jpg" class="gallery-link small" data-image="static/img/gallery-1.jpg" itemprop="contentUrl" data-size="1920x1280">
+
+			                        <img src="static/img/gallery-3.jpg" itemprop="thumbnail" alt="This is my work" class="img-responsive gallery-img small-square" />
+
+			                    </a>
+
+			                    <figcaption itemprop="caption description">
+
+			                        <div class="photo-details">
+			                        
+			                            <h4>경제<small>금융, 증권, 부동산</small></h4>
+
+			                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+			                        </div>
+
+			                    </figcaption>
+
+			                </figure>
+
+			                <!-- 3 -->
+			                <figure class="col-xs-12 col-sm-6 col-lg-6 fooinside" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" title="Society">
+
+			                    <a href="static/img/gallery-3.jpg" class="gallery-link small" data-image="static/img/gallery-1.jpg" itemprop="contentUrl" data-size="1920x1280">
+
+			                        <img src="static/img/gallery-3.jpg" itemprop="thumbnail" alt="This is my work" class="img-responsive gallery-img small-square" />
+
+			                    </a>
+
+			                    <figcaption itemprop="caption description">
+
+			                        <div class="photo-details">
+			                        
+			                           <h4>사회<small>노동, 사건사고</small></h4>
+
+			                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+
+			                        </div>
+
+			                    </figcaption>
+
+			                </figure>
+
+			                <!-- 4 -->
+			                <figure class="col-xs-12 col-sm-6 col-lg-6 fooinside" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" title="Living and Culture">
+
+			                    <a href="static/img/gallery-4.jpg" class="gallery-link small" data-image="static/img/gallery-1.jpg" itemprop="contentUrl" data-size="1920x1280">
+
+			                        <img src="static/img/gallery-4.jpg" itemprop="thumbnail" alt="This is my work" class="img-responsive gallery-img small-square" />
+
+			                    </a>
+
+			                    <figcaption itemprop="caption description">
+
+			                        <div class="photo-details">
+			                        
+			                            <h4>생활, 문화 <small>날씨, 책, 건강</small></h4>
+
+			                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+			                        </div>
+
+			                    </figcaption>
+
+			                </figure>
+
+			                <!-- 5 -->
+			                <figure class="col-xs-12 col-sm-6 col-lg-6 fooinside" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" title="Global">
+
+			                    <a href="static/img/gallery-5.jpg" class="gallery-link small" data-image="static/img/gallery-1.jpg" itemprop="contentUrl" data-size="1920x1280">
+
+			                        <img src="static/img/gallery-5.jpg" itemprop="thumbnail" alt="This is my work" class="img-responsive gallery-img small-square" />
+
+			                    </a>
+
+			                    <figcaption itemprop="caption description">
+
+			                        <div class="photo-details">
+			                        
+			                            <h4>세계<small>Global</small></h4>
+
+			                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+
+			                        </div>
+
+			                    </figcaption>
+
+			                </figure>
+
+			                <!-- 6 -->
+			                <figure class="col-xs-12 col-sm-6 col-lg-6 fooinside" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" title="IT and Science">
+
+			                    <a href="static/img/gallery-6.jpg" class="gallery-link small" data-image="static/img/gallery-1.jpg" itemprop="contentUrl" data-size="1920x1280">
+
+			                        <img src="static/img/gallery-6.jpg" itemprop="thumbnail" alt="This is my work" class="img-responsive gallery-img small-square" />
+
+			                    </a>
+
+			                    <figcaption itemprop="caption description">
+
+			                        <div class="photo-details">
+			                        
+			                            <h4>IT, 과학<small>인터넷, 모바일, 과학</small></h4>
+
+			                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+			                        </div>
+
+			                    </figcaption>
+
+			                </figure>
+
+			            </div>
+
+		            </div>
+
+                    <div class="col-xs-12 col-sm-6 col-lg-6 left-center-text split-section foo">
+
+                        <div class="left-center-part">
+
+                            <h2 id="keywordSection">키워드</h2>
+
+                            <p>오늘의 키워드를 알려드립니다</p>
+                            <!-- 2 -->
+                            <div class="col-xs-12 col-sm-6 col-lg-6 block-team">
+                                <p style="width: 10px; height: 10px;">
+                                    <a href="" id="prevDate">◀</a><a href="" style="padding-left: 480px;" id="nextDate">▶</a>
+                                </p>
+                                <table>
+                                    <tr>
+                                        <td colspan="2" width="300" align="center" id="keywordDatePast" about="{{ past }}">{{ past }}</td>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><a href="#" class="nextToRecommend" id="pastKey1">키워드1</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><a href="#" class="nextToRecommend" id="pastKey2">키워드1</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#" class="nextToRecommend" id="pastKey3">키워드1</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td><a href="#" class="nextToRecommend" id="pastKey4">키워드1</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td><a href="#" class="nextToRecommend" id="pastKey5">키워드1</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <br>
+                            <div id="slideshow-keyword">
+                                <table>
+                                    <tr>
+                                        <td colspan="2" width="300" align="center" id="keywordDateCurr">{{ now }}</td>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><a href="#" class="nextToRecommend" id="keywordKey1">키워드2</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><a href="#" class="nextToRecommend" id="keywordKey2">키워드2</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#" class="nextToRecommend" id="keywordKey3">키워드2</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td><a href="#" class="nextToRecommend" id="keywordKey4">키워드2</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td><a href="#" class="nextToRecommend" id="keywordKey5">키워드2</a></td>
+                                    </tr>
+                                </table>
+
+                                <table hidden="True">
+                                    <tr>
+                                        <td colspan="3" width="300" align="center" id="keywordDatePast">{{ now }}</td>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><a href="#" class="nextToRecommend" id="pastToCur1">키워드1</a></td>
+                                        <td id="pastToCurMove1"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><a href="#" class="nextToRecommend" id="pastToCur2">키워드1</a></td>
+                                        <td id="pastToCurMove2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><a href="#" class="nextToRecommend" id="pastToCur3">키워드1</a></td>
+                                        <td id="pastToCurMove3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td><a href="#" class="nextToRecommend" id="pastToCur4">키워드1</a></td>
+                                        <td id="pastToCurMove4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td><a href="#" class="nextToRecommend" id="pastToCur5">키워드1</a></td>
+                                        <td id="pastToCurMove5"></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <br>
+                            <h3>Julien Palmer
+                                <small>Designer</small>
+                            </h3>
+
+                            <p>Lorem ipsum Do dolor commodo occaecat sit pariatur nisi sit laboris officia exercitation
+                                officia laboris ex ullamco nulla do in elit.</p>
+
+                        </div>
+                        <!-- END - Team -->
+
+                    </div>
+
+		        </section>
+
+			</div>
+			<!-- +++ END - Portfolio +++ -->
+
+			<!-- +++ START - Contact +++ -->
+			<div class="section" id="section4">
+
+				<section id="contact" class="text-left-block">
+
+					<div class="row row-no-margin">
+
+						<div class="col-xs-12 col-sm-6 col-lg-6 left-center-text split-section spec-padding-bottom foo">
+
+							<div class="left-center-part">
+								
+								<h2>Get in touch</h2>
+
+		                		<p class="subtitle">We are here to help you <strong>Tuesday through Saturday</strong>, from 9:00 AM to 10:00 PM.<br>
+									Contact us via <strong>Phone : </strong><a href="tel:66-1254-611" class="phone-mail-link">(+33) 66-1254-611</a> or <strong>Email</strong> : <a href="mailto:pure@mail.com" class="phone-mail-link">pure@mail.com</a></p>
+
+		                		<div class="row">
+
+				                    <div class="col-xs-12 col-sm-12 col-lg-12">
+
+				                        <!-- START - Contact Form -->
+				                        <form id="contact-form" name="contact-form" method="POST" data-name="Contact Form">
+
+				                            <div class="row">
+
+				                            	<!-- ! Anti-spam field ! Invisible for users, the major part of bots will write something in this field, then, they will be blocked and no spam in your inbox will come.  -->
+				                                <div class="col-xs-12 col-sm-12 col-lg-12 display-none">
+				                                    <div class="form-group">
+				                                        <input type="text" id="checking" class="form form-control" placeholder="Leave this field empty" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Leave this field empty'" name="checking" data-name="Checking">
+				                                    </div>
+				                                </div>
+
+				                                <!-- Full name -->
+				                                <div class="col-xs-12 col-sm-6 col-lg-6">
+				                                    <div class="form-group">
+				                                        <input type="text" id="name" class="form form-control" placeholder="Name*" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name*'" name="name" data-name="Name" required>
+				                                    </div>
+				                                </div>
+
+				                                <!-- E-mail -->
+				                                <div class="col-xs-12 col-sm-6 col-lg-6">
+				                                    <div class="form-group">
+				                                        <input type="email" id="email" class="form form-control" placeholder="Email Address*" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address*'" name="email-address" data-name="Email Address" required>
+				                                    </div>
+				                                </div>
+
+				                                <!-- Company -->
+				                                <div class="col-xs-12 col-sm-6 col-lg-6">
+				                                    <div class="form-group">
+				                                        <input type="text" id="company" class="form form-control" placeholder="Company name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Company name'" name="company" data-name="Company" required>
+				                                    </div>
+				                                </div>
+
+				                                <!-- Phone -->
+				                                <div class="col-xs-12 col-sm-6 col-lg-6">
+				                                    <div class="form-group">
+				                                        <input type="tel" id="phone" class="form form-control" placeholder="Phone number*" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone number*'" name="phone" data-name="Phone" required>
+				                                    </div>
+				                                </div>
+
+				                                <!-- Message -->
+				                                <div class="col-xs-12 col-sm-12 col-lg-12">
+				                                    <div class="form-group">
+				                                        <textarea id="text-area" class="form textarea form-control" placeholder="Your message here*... 20 characters Min." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your message here*... 20 characters Min.'" name="message" data-name="Text Area" required></textarea>
+				                                    </div>
+				                                    <span class="sub-text">* Required fields</span>
+				                                </div>
+
+				                            </div>
+
+				                            <!-- Form submission -->
+				                            <button type="submit" id="valid-form" class="btn btn-color">Send my Message</button>
+
+				                        </form>
+				                        <!-- END - Contact Form -->
+				                        
+				                        <!-- START - Answer for the contact form is displayed in the next div, do not remove it. -->       
+				                        <div id="block-answer">
+
+				                            <div id="answer"></div>
+
+				                        </div>
+				                        <!-- END - Answer... -->
+
+				                    </div>
+
+		               			</div>
+							
+								<p class="copyright">© PURE - Made for Awesome People</p>
+
+							</div>	
+
+						</div>
+
+						<!-- Map -->
+						<div class="col-xs-12 col-sm-6 col-lg-6 map-info split-section foo">
+
+							<div id="map"></div>
+
+						</div>
+
+					</div>
+
+				</section>
+
+			</div>
+			<!-- +++ END - Contact +++ -->
+
+		</div>
+		<!-- +++ END - Fullpage sections +++ -->
+
+		<!-- +++ START - Newsletter panel +++ -->
+		<div id="info">
+
+			<!-- Cross to close the Newsletter panel on top right -->
+			<button class="close-newsletter"><i class="icon ion-close-round"></i></button>
+
+			<div class="content">
+
+                <p class="subtitle">키워드를 검색해보세요<br><strong>추천 키워드</strong></p>
+
+                <!-- START - Newsletter Form -->
+				<div id="subscribe">
+
+	                <form action="/searchKeyword" id="notifyMe" method="POST">
+
+	                    <div class="form-group">
+
+	                        <div class="controls">
+	                            
+	                        	<!-- Field  -->
+	                        	<input type="text" id="mail-sub" name="email" placeholder="Click here to write keyword" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Click here to write keyword'" class="form-control email srequiredField" />
+
+	                        	<!-- Spinner top left during the submission -->
+	                        	<i class="fa fa-spinner opacity-0"></i>
+
+	                            <!-- Button -->
+	                            <button class="btn btn-lg submit">Search</button>
+
+	                            <div class="clear"></div>
+
+	                        </div>
+
+	                    </div>
+
+	                </form>
+
+    			</div>
+    			<!-- END - Newsletter Form -->
+			
+			</div>
+
+			<!-- Answer for the newsletter form is displayed in the next div, do not remove it. -->
+			<div class="block-message">
+
+				<div class="message">
+
+					<p class="notify-valid"></p>
+
+				</div>
+
+			</div>
+
+			<p class="spam-news"><i class="fa fa-lock"></i> We hate spam just as much as you do. Your email will stay secret.</p>
+
+		</div>
+		<!-- +++ END - Newsletter panel +++ -->		
+
+
+		<!-- +++ List of social media on the bottom right +++ -->
+		<div id="social-nav">
+
+			<ul>
+				<!-- Facebook -->
+				<li>
+					<a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+				</li>
+
+				<!-- Twitter -->
+				<li>
+					<a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+				</li>
+
+				<!-- Linkedin -->
+				<li>
+					<a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+				</li>
+
+			</ul>
+
+		</div>
+
+		<!-- Root element of PhotoSwipe, the gallery. Must have class pswp. -->
+		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+		    <!-- Background of PhotoSwipe. 
+	        	It's a separate element as animating opacity is faster than rgba(). -->
+		    <div class="pswp__bg"></div>
+
+		    <!-- Slides wrapper with overflow:hidden. -->
+		    <div class="pswp__scroll-wrap">
+
+		        <!-- Container that holds slides. 
+		            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+		            Don't modify these 3 item elements, data is added later on. -->
+		        <div class="pswp__container">
+		            <div class="pswp__item"></div>
+		            <div class="pswp__item"></div>
+		            <div class="pswp__item"></div>
+		        </div>
+
+		        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+		        <div class="pswp__ui pswp__ui--hidden">
+
+		            <div class="pswp__top-bar">
+
+		                <!--  Controls are self-explanatory. Order can be changed. -->
+
+		                <div class="pswp__counter"></div>
+
+		                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+		                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+		                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+		                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+		                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+		                <div class="pswp__preloader">
+		                    <div class="pswp__preloader__icn">
+		                      <div class="pswp__preloader__cut">
+		                        <div class="pswp__preloader__donut"></div>
+		                      </div>
+		                    </div>
+		                </div>
+
+		            </div>
+
+		            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+		                <div class="pswp__share-tooltip"></div> 
+		            </div>
+
+		            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+		            </button>
+
+		            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+		            </button>
+
+		            <div class="pswp__caption">
+		                <div class="pswp__caption__center"></div>
+		            </div>
+
+		        </div>
+
+		    </div>
+
+		</div>
+		<!-- /. Root element of PhotoSwipe. Must have class pswp. -->
+
+		<!-- ///////////////////\\\\\\\\\\\\\\\\\\\ -->
+        <!-- ********** jQuery Resources ********** -->
+        <!-- \\\\\\\\\\\\\\\\\\\/////////////////// -->
+
+        <!-- * Libraries jQuery, Easing and Bootstrap - Be careful to not remove them * -->
+        <script src="static/js/jquery.min.js"></script>
+        <script src="static/js/jquery.easings.min.js"></script>
+        <script src="static/js/bootstrap.min.js"></script>
+
+		<!-- FullPage plugin -->
+		<script src="static/js/jquery.fullPage.js"></script>
+
+        <!-- Slideshow plugin -->
+        <script src="static/js/vegas.js"></script>
+
+        <!-- Scroll Reveal plugin -->
+        <script src="static/js/scrollreveal.min.js"></script>
+
+		<!-- Google Maps API and Skin -->
+		<script src="http://maps.google.com/maps/api/js"></script>
+		<script src="static/js/map.js"></script>
+
+		<!-- PhotoSwipe Core JS file -->
+		<script src="static/js/photoswipe.js"></script>
+
+		<!-- PhotoSwipe UI JS file -->
+		<script src="static/js/photoswipe-ui-default.js"></script>
+
+		<!-- Contact form plugin -->
+		<script src="static/js/contact-me.js"></script>
+
+		<!-- Newsletter plugin -->
+		<script src="static/js/notifyMe.js"></script>
+
+		<!-- Main JS File -->
+		<script src="static/js/main-animated.js"></script>
+
+	</body>
+
+</html>

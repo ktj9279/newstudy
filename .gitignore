@@ -5,3 +5,5 @@ db/Term/
 db/unique_nouns_idf/
 db/news_db.db
 db/news_db.db-journal
+db/news_db_Term1200.db
+db/news_db_new

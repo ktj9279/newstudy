@@ -1,0 +1,7 @@
+.ipynb_checkpoints
+db/inverted_index/
+db/original/
+db/Term/
+db/unique_nouns_idf/
+db/news_db.db
+db/news_db.db-journal

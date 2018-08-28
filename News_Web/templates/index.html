@@ -66,12 +66,12 @@
 					<p class="open-anim opacity-0"><strong>뉴스 스토리</strong></p>
 
 					<!-- Line 1695 in js/jquery.fullpage.js is the place to select the anchor scrolling to the section of your choice -->
-					<a id="button-more" class="light-btn open-anim opacity-0">{{ keyword[0] }}</a>
+					<a id="button-more" class="light-btn open-anim opacity-0">Section 보기</a>
 
                     <!-- +++ Button used for opening the newsletter panel +++ -->
                     <a id="open-newsletter" class="action-btn">키워드 검색</a>
 
-                    <a id="button-more2" class="light-btn open-anim opacity-0">{{ keyword[1] }}</a>
+{#                    <a id="button-more2" class="light-btn open-anim opacity-0"></a>#}
 				</div>
 
 			</div>
@@ -89,14 +89,6 @@
                         </div>
 
 						<div id="invert-text" class="col-xs-12 col-sm-6 col-lg-6 left-center-text split-section">
-
-							<div class="left-center-part foo">
-
-								<h2>Rest is history</h2>
-
-								<p>Lorem ipsum Dolor elit dolor laboris in enim ex ex deserunt consequat irure eu commodo mollit anim minim tempor Excepteur pariatur sit ut voluptate amet eiusmod aute et occaecat incididunt aute sit cupidatat dolore enim proident laboris est dolor commodo ullamco in reprehenderit sit tempor nisi nulla in ex deserunt esse ullamco dolore nostrud pariatur magna cillum commodo nisi sunt mollit elit aliquip eu sunt irure sint enim in Duis ullamco elit Duis veniam ex esse labore ex fugiat aute nostrud ullamco est laborum aliqua Duis eiusmod nostrud consequat pariatur eiusmod in culpa laboris dolore qui magna irure non veniam ut cillum nisi commodo enim eiusmod aute ex in officia amet proident irure dolore Ut qui aliquip labore ea tempor amet culpa irure nulla consectetur sed proident cillum voluptate cillum cillum consectetur occaecat tempor commodo incididunt aute aliquip sunt eu id deserunt magna sint sint nostrud cupidatat incididunt fugiat minim culpa est sint.</p>
-
-							</div>
 
 						</div>
 
@@ -128,7 +120,7 @@
 
 								<h2 id="showClickedKeyWord">Keyword</h2>
 
-								<p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.</p>
+								<p>선택된 키워드 입니다</p>
 
 								<!-- +++ START - Carousel +++ -->
 								<div id="carousel-services" class="carousel slide" data-interval="6000" data-ride="carousel">
@@ -155,7 +147,7 @@
 
                                                     <h3><a href="#" class="showNewsContents" title="">뉴스1</a></h3>
 
-													<p>뉴스1 내용 20~30자</p>
+													<p></p>
 
 												</div> <!-- END - Block services -->
 
@@ -166,7 +158,7 @@
 
                                                     <h3><a href="#" class="showNewsContents" title="">뉴스2</a></h3>
 
-													<p>뉴스2 내용 20~30자</p>
+													<p></p>
 
 												</div> <!-- END - Block services -->
 
@@ -186,7 +178,7 @@
 													<span class="icon-services icon ion-ios-navigate-outline"></span>
                                                     <h3><a href="#" class="showNewsContents" title="">뉴스 3</a></h3>
 
-													<p>뉴스3 내용 20~30자</p>
+													<p></p>
 
 												</div> <!-- END - Block services -->
 
@@ -197,7 +189,7 @@
 
                                                     <h3><a href="#" class="showNewsContents" title="">뉴스 4</a></h3>
 
-													<p>뉴스4 내용 20~30자</p>
+													<p></p>
 
 												</div> <!-- END - Block services -->
 
@@ -226,14 +218,20 @@
 
 						    </div>
 
-						</div>
+                        </div>
 
                         <!-- 뉴스 내용 -->
-                        <div id="newsContents">
+                        <div id="newsContents" class="col-xs-12 col-sm-6 col-lg-6 slideshow-services split-section foo">
                             <h3 class="innerNews">뉴스 타이틀</h3>
                             <h5 class="innerNews">뉴스의 내용 100자</h5>
                             <a id="btn-moveToEntire" onclick="window.open(this.href,'기사보기')" target="_blank">전문보기</a>
+
+                            <div id="chartContents" style="width: 550px; height: 400px; ">
+                                <canvas id="canvas"></canvas>
+                            </div>
                         </div>
+
+
                     </div>
 
 				</section>
@@ -259,11 +257,11 @@
 			            <div class="portfolio sect" itemscope itemtype="http://schema.org/ImageGallery">
 
 			                <!-- 1 -->
-			                <figure class="col-xs-12 col-sm-6 col-lg-6 fooinside" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" title="Politics">
+			                <figure id="start" class="col-xs-12 col-sm-6 col-lg-6 fooinside" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" title="Politics">
 
-			                    <a href="#" data-image="static/img/politics-gallery.jpg" itemprop="contentUrl" data-size="1920x1280">
+			                    <a href="#" data-image="static/img/politics-gallery2-black.jpg" itemprop="contentUrl" data-size="1920x1280">
 
-			                        <img src="static/img/politics-gallery.jpg" itemprop="thumbnail" alt="This is my work" class="img-responsive gallery-img small-square" />
+			                        <img src="static/img/politics-gallery2-black.jpg" itemprop="thumbnail" alt="This is my work" class="img-responsive gallery-img small-square" width="100%"/>
 
 			                    </a>
 
@@ -280,11 +278,11 @@
 			                </figure>
 
 			                <!-- 2 -->
-			                <figure class="col-xs-12 col-sm-6 col-lg-6 fooinside" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" title="Economics">
+			                <figure class="col-xs-12 col-sm-6 col-lg-6 fooinside" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" title="Economic">
 
-			                    <a href="static/img/gallery-3.jpg" class="gallery-link small" data-image="static/img/gallery-1.jpg" itemprop="contentUrl" data-size="1920x1280">
+			                    <a href="#" data-image="static/img/economics-gallery2-black.jpg" itemprop="contentUrl" data-size="1920x1280">
 
-			                        <img src="static/img/gallery-3.jpg" itemprop="thumbnail" alt="This is my work" class="img-responsive gallery-img small-square" />
+			                        <img src="static/img/economics-gallery2-black.jpg" itemprop="thumbnail" alt="This is my work" class="img-responsive gallery-img small-square" width="100%"/>
 
 			                    </a>
 
@@ -305,9 +303,9 @@
 			                <!-- 3 -->
 			                <figure class="col-xs-12 col-sm-6 col-lg-6 fooinside" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" title="Society">
 
-			                    <a href="static/img/gallery-3.jpg" class="gallery-link small" data-image="static/img/gallery-1.jpg" itemprop="contentUrl" data-size="1920x1280">
+			                    <a href="#" data-image="static/img/society-gallery2-black.jpg" itemprop="contentUrl" data-size="1920x1280">
 
-			                        <img src="static/img/gallery-3.jpg" itemprop="thumbnail" alt="This is my work" class="img-responsive gallery-img small-square" />
+			                        <img src="static/img/society-gallery2-black.jpg" itemprop="thumbnail" alt="This is my work" class="img-responsive gallery-img small-square" width="100%"/>
 
 			                    </a>
 
@@ -326,11 +324,11 @@
 			                </figure>
 
 			                <!-- 4 -->
-			                <figure class="col-xs-12 col-sm-6 col-lg-6 fooinside" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" title="Living and Culture">
+			                <figure class="col-xs-12 col-sm-6 col-lg-6 fooinside" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" title="Culture">
 
-			                    <a href="static/img/gallery-4.jpg" class="gallery-link small" data-image="static/img/gallery-1.jpg" itemprop="contentUrl" data-size="1920x1280">
+			                    <a href="#" data-image="static/img/living-gallery2-black.jpg" itemprop="contentUrl" data-size="1920x1280">
 
-			                        <img src="static/img/gallery-4.jpg" itemprop="thumbnail" alt="This is my work" class="img-responsive gallery-img small-square" />
+			                        <img src="static/img/living-gallery2-black.jpg" itemprop="thumbnail" alt="This is my work" class="img-responsive gallery-img small-square" width="100%"/>
 
 			                    </a>
 
@@ -351,9 +349,9 @@
 			                <!-- 5 -->
 			                <figure class="col-xs-12 col-sm-6 col-lg-6 fooinside" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" title="Global">
 
-			                    <a href="static/img/gallery-5.jpg" class="gallery-link small" data-image="static/img/gallery-1.jpg" itemprop="contentUrl" data-size="1920x1280">
+			                    <a href="#" data-image="static/img/global-gallery-black.jpg" itemprop="contentUrl" data-size="1920x1280">
 
-			                        <img src="static/img/gallery-5.jpg" itemprop="thumbnail" alt="This is my work" class="img-responsive gallery-img small-square" />
+			                        <img src="static/img/global-gallery-black.jpg" itemprop="thumbnail" alt="This is my work" class="img-responsive gallery-img small-square" width="100%"/>
 
 			                    </a>
 
@@ -372,11 +370,11 @@
 			                </figure>
 
 			                <!-- 6 -->
-			                <figure class="col-xs-12 col-sm-6 col-lg-6 fooinside" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" title="IT and Science">
+			                <figure class="col-xs-12 col-sm-6 col-lg-6 fooinside" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" title="Digital">
 
-			                    <a href="static/img/gallery-6.jpg" class="gallery-link small" data-image="static/img/gallery-1.jpg" itemprop="contentUrl" data-size="1920x1280">
+			                    <a href="#" data-image="static/img/it-gallery-black.jpg" itemprop="contentUrl" data-size="1920x1280">
 
-			                        <img src="static/img/gallery-6.jpg" itemprop="thumbnail" alt="This is my work" class="img-responsive gallery-img small-square" />
+			                        <img src="static/img/it-gallery-black.jpg" itemprop="thumbnail" alt="This is my work" class="img-responsive gallery-img small-square" width="100%"/>
 
 			                    </a>
 
@@ -410,9 +408,9 @@
                                 <p style="width: 10px; height: 10px;">
                                     <a href="" id="prevDate">◀</a><a href="" style="padding-left: 480px;" id="nextDate">▶</a>
                                 </p>
-                                <table>
+                                <table id="backKeyword">
                                     <tr>
-                                        <td colspan="2" width="300" align="center" id="keywordDatePast" about="{{ past }}">{{ past }}</td>
+                                        <td colspan="2" width="300" align="center" class="keywordDate" id="keywordDatePast" about="{{ past }}">{{ past }}</td>
                                     <tr>
                                         <td>1</td>
                                         <td><a href="#" class="nextToRecommend" id="pastKey1">키워드1</a></td>
@@ -440,67 +438,66 @@
                             <div id="slideshow-keyword">
                                 <table>
                                     <tr>
-                                        <td colspan="2" width="300" align="center" id="keywordDateCurr">{{ now }}</td>
+                                        <td colspan="2" width="300" align="center" class="keywordDate" id="keywordDateCurr">{{ now }}</td>
                                     <tr>
-                                        <td>1</td>
-                                        <td><a href="#" class="nextToRecommend" id="keywordKey1">키워드2</a></td>
+                                        <td width="10px">1</td>
+                                        <td width="80px"><a href="#" class="nextToRecommend" id="keywordKey1" style="text-align: center">키워드2</a></td>
                                     </tr>
                                     <tr>
-                                        <td>2</td>
-                                        <td><a href="#" class="nextToRecommend" id="keywordKey2">키워드2</a></td>
+                                        <td width="10px">2</td>
+                                        <td width="80px"><a href="#" class="nextToRecommend" id="keywordKey2">키워드2</a></td>
                                     </tr>
                                     <tr>
-                                        <td>3</td>
-                                        <td><a href="#" class="nextToRecommend" id="keywordKey3">키워드2</a></td>
+                                        <td width="10px">3</td>
+                                        <td width="80px"><a href="#" class="nextToRecommend" id="keywordKey3">키워드2</a></td>
                                     </tr>
                                     <tr>
-                                        <td>4</td>
-                                        <td><a href="#" class="nextToRecommend" id="keywordKey4">키워드2</a></td>
+                                        <td width="10px">4</td>
+                                        <td width="80px"><a href="#" class="nextToRecommend" id="keywordKey4">키워드2</a></td>
                                     </tr>
                                     <tr>
-                                        <td>5</td>
-                                        <td><a href="#" class="nextToRecommend" id="keywordKey5">키워드2</a></td>
+                                        <td width="10px">5</td>
+                                        <td width="80px"><a href="#" class="nextToRecommend" id="keywordKey5">키워드2</a></td>
                                     </tr>
                                 </table>
 
                                 <table hidden="True">
                                     <tr>
-                                        <td colspan="3" width="300" align="center" id="keywordDatePast">{{ now }}</td>
+                                        <td colspan="3" width="300" align="center" class="keywordDate" id="keywordPastToCur" about="{{ now }}">{{ now }}</td>
                                     <tr>
                                         <td>1</td>
-                                        <td><a href="#" class="nextToRecommend" id="pastToCur1">키워드1</a></td>
+                                        <td width="100px"><a href="#" class="nextToRecommend" id="pastToCur1">키워드1</a></td>
                                         <td id="pastToCurMove1"></td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td><a href="#" class="nextToRecommend" id="pastToCur2">키워드1</a></td>
+                                        <td width="100px"><a href="#" class="nextToRecommend" id="pastToCur2">키워드1</a></td>
                                         <td id="pastToCurMove2"></td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
-                                        <td><a href="#" class="nextToRecommend" id="pastToCur3">키워드1</a></td>
+                                        <td width="100px"><a href="#" class="nextToRecommend" id="pastToCur3">키워드1</a></td>
                                         <td id="pastToCurMove3"></td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
-                                        <td><a href="#" class="nextToRecommend" id="pastToCur4">키워드1</a></td>
+                                        <td width="100px"><a href="#" class="nextToRecommend" id="pastToCur4">키워드1</a></td>
                                         <td id="pastToCurMove4"></td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
-                                        <td><a href="#" class="nextToRecommend" id="pastToCur5">키워드1</a></td>
+                                        <td width="100px"><a href="#" class="nextToRecommend" id="pastToCur5">키워드1</a></td>
                                         <td id="pastToCurMove5"></td>
                                     </tr>
                                 </table>
                             </div>
 
                             <br>
-                            <h3>Julien Palmer
-                                <small>Designer</small>
+                            <h3>
+                                <small>이슈 TOP 5 키워드</small>
                             </h3>
 
-                            <p>Lorem ipsum Do dolor commodo occaecat sit pariatur nisi sit laboris officia exercitation
-                                officia laboris ex ullamco nulla do in elit.</p>
+                            <p id="keywordTrans"></p>
 
                         </div>
                         <!-- END - Team -->
@@ -511,114 +508,6 @@
 
 			</div>
 			<!-- +++ END - Portfolio +++ -->
-
-			<!-- +++ START - Contact +++ -->
-			<div class="section" id="section4">
-
-				<section id="contact" class="text-left-block">
-
-					<div class="row row-no-margin">
-
-						<div class="col-xs-12 col-sm-6 col-lg-6 left-center-text split-section spec-padding-bottom foo">
-
-							<div class="left-center-part">
-								
-								<h2>Get in touch</h2>
-
-		                		<p class="subtitle">We are here to help you <strong>Tuesday through Saturday</strong>, from 9:00 AM to 10:00 PM.<br>
-									Contact us via <strong>Phone : </strong><a href="tel:66-1254-611" class="phone-mail-link">(+33) 66-1254-611</a> or <strong>Email</strong> : <a href="mailto:pure@mail.com" class="phone-mail-link">pure@mail.com</a></p>
-
-		                		<div class="row">
-
-				                    <div class="col-xs-12 col-sm-12 col-lg-12">
-
-				                        <!-- START - Contact Form -->
-				                        <form id="contact-form" name="contact-form" method="POST" data-name="Contact Form">
-
-				                            <div class="row">
-
-				                            	<!-- ! Anti-spam field ! Invisible for users, the major part of bots will write something in this field, then, they will be blocked and no spam in your inbox will come.  -->
-				                                <div class="col-xs-12 col-sm-12 col-lg-12 display-none">
-				                                    <div class="form-group">
-				                                        <input type="text" id="checking" class="form form-control" placeholder="Leave this field empty" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Leave this field empty'" name="checking" data-name="Checking">
-				                                    </div>
-				                                </div>
-
-				                                <!-- Full name -->
-				                                <div class="col-xs-12 col-sm-6 col-lg-6">
-				                                    <div class="form-group">
-				                                        <input type="text" id="name" class="form form-control" placeholder="Name*" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name*'" name="name" data-name="Name" required>
-				                                    </div>
-				                                </div>
-
-				                                <!-- E-mail -->
-				                                <div class="col-xs-12 col-sm-6 col-lg-6">
-				                                    <div class="form-group">
-				                                        <input type="email" id="email" class="form form-control" placeholder="Email Address*" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address*'" name="email-address" data-name="Email Address" required>
-				                                    </div>
-				                                </div>
-
-				                                <!-- Company -->
-				                                <div class="col-xs-12 col-sm-6 col-lg-6">
-				                                    <div class="form-group">
-				                                        <input type="text" id="company" class="form form-control" placeholder="Company name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Company name'" name="company" data-name="Company" required>
-				                                    </div>
-				                                </div>
-
-				                                <!-- Phone -->
-				                                <div class="col-xs-12 col-sm-6 col-lg-6">
-				                                    <div class="form-group">
-				                                        <input type="tel" id="phone" class="form form-control" placeholder="Phone number*" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone number*'" name="phone" data-name="Phone" required>
-				                                    </div>
-				                                </div>
-
-				                                <!-- Message -->
-				                                <div class="col-xs-12 col-sm-12 col-lg-12">
-				                                    <div class="form-group">
-				                                        <textarea id="text-area" class="form textarea form-control" placeholder="Your message here*... 20 characters Min." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your message here*... 20 characters Min.'" name="message" data-name="Text Area" required></textarea>
-				                                    </div>
-				                                    <span class="sub-text">* Required fields</span>
-				                                </div>
-
-				                            </div>
-
-				                            <!-- Form submission -->
-				                            <button type="submit" id="valid-form" class="btn btn-color">Send my Message</button>
-
-				                        </form>
-				                        <!-- END - Contact Form -->
-				                        
-				                        <!-- START - Answer for the contact form is displayed in the next div, do not remove it. -->       
-				                        <div id="block-answer">
-
-				                            <div id="answer"></div>
-
-				                        </div>
-				                        <!-- END - Answer... -->
-
-				                    </div>
-
-		               			</div>
-							
-								<p class="copyright">© PURE - Made for Awesome People</p>
-
-							</div>	
-
-						</div>
-
-						<!-- Map -->
-						<div class="col-xs-12 col-sm-6 col-lg-6 map-info split-section foo">
-
-							<div id="map"></div>
-
-						</div>
-
-					</div>
-
-				</section>
-
-			</div>
-			<!-- +++ END - Contact +++ -->
 
 		</div>
 		<!-- +++ END - Fullpage sections +++ -->
@@ -790,10 +679,6 @@
         <!-- Scroll Reveal plugin -->
         <script src="static/js/scrollreveal.min.js"></script>
 
-		<!-- Google Maps API and Skin -->
-		<script src="http://maps.google.com/maps/api/js"></script>
-		<script src="static/js/map.js"></script>
-
 		<!-- PhotoSwipe Core JS file -->
 		<script src="static/js/photoswipe.js"></script>
 
@@ -808,6 +693,9 @@
 
 		<!-- Main JS File -->
 		<script src="static/js/main-animated.js"></script>
+
+        <!-- Chart JS File -->
+		<script src="static/js/Chart.bundle.js"></script>
 
 	</body>
 

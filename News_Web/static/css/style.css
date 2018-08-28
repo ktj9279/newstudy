@@ -762,6 +762,10 @@ sup {
 .text-left-block .left-center-text .left-center-part table{
 
 }
+.right-center-part{
+  display: table-cell;
+  vertical-align: middle;
+}
 
 .copyright {
   position: absolute;
@@ -832,14 +836,14 @@ sup {
   z-index: 20;
 }
 .intro p {
-  font-family: 'Nanum Myeongjo', serif;
+  font-family: Raleway, "Helvetica Neue", "Lucida Grande", Arial, Verdana, sans-serif, 'Nanum Myeongjo', serif;
   color: #FFFFFF;
   width: auto;
   font-size: 1.7rem;
   margin-bottom: 2rem;
 }
 .intro .light-btn {
-  font-family: 'Nanum Myeongjo', serif;
+  font-family: Raleway, "Helvetica Neue", "Lucida Grande", Arial, Verdana, sans-serif, 'Nanum Myeongjo', serif;
   background: #FFFFFF;
   font-weight: 700;
   padding: 0.7em 2em;
@@ -1019,7 +1023,7 @@ sup {
 }
 .row-no-margin #newsContents .innerNews{
   height: auto;
-  margin-top: 100px;
+  margin-top: 50px;
   text-align: center;
 }
 #btn-moveToEntire{

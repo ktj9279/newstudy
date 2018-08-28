@@ -1685,19 +1685,26 @@
         //sectionClick event
         $('figure').on('click', function (e) {
             e.preventDefault();
+
             var sectionTitle = $(this).attr('title');
+            $('#keywordSection').attr('about',sectionTitle);
             if(String(new Date().getMonth()+1).length==1){
-                var date = new Date().getFullYear()+"-0"+(new Date().getMonth()+1)+"-"+new Date().getDate();
-                var pastdate = new Date().getFullYear()+"-0"+(new Date().getMonth()+1)+"-"+(new Date().getDate()-1);
+                var date = new Date().getFullYear()+"-0"+(new Date().getMonth()+1)+"-"+(new Date().getDate()-1);
+                var pastdate = new Date().getFullYear()+"-0"+(new Date().getMonth()+1)+"-"+(new Date().getDate()-2);
             }
             else{
-                var date = new Date().getFullYear()+"-"+(new Date().getMonth()+1)+"-"+new Date().getDate();
-                var pastdate = new Date().getFullYear()+"-"+(new Date().getMonth()+1)+"-"+(new Date().getDate()-1);
+                var date = new Date().getFullYear()+"-"+(new Date().getMonth()+1)+"-"+(new Date().getDate()-1);
+                var pastdate = new Date().getFullYear()+"-"+(new Date().getMonth()+1)+"-"+(new Date().getDate()-2);
             }
             $.ajax({
                 data:{"sectionTitle":sectionTitle, "date":date, "pastdate":pastdate},
                 url:"/selectData",
                 success: function(result){ //result에 current 5개
+                    $('.left-center-part #keywordTrans').text(pastdate+" 에서 "+date+" 키워드 변화");
+                    $('#keywordPastToCur').text(date);
+                    $('#keywordDatePast').text(pastdate);
+                    $('#keywordDateCurr').text(date);
+
                     $('#keywordKey1').text(result[0][0][1]);
                     $('#keywordKey2').text(result[0][1][1]);
                     $('#keywordKey3').text(result[0][2][1]);
@@ -1806,8 +1813,140 @@
 
         $('#prevDate').on('click', function(e){
             e.preventDefault();
-            var pastDate = $('#keywordDatePast').attr('about');
-            alert(pastDate);
+            var pastDate = new Date($('#keywordDatePast').attr('about'));
+            if(String(pastDate.getMonth()+1).length == '1'){
+                var curDate = String(pastDate.getFullYear())+'-0'+String(pastDate.getMonth()+1)+'-'+String(pastDate.getDate());
+            }
+            else{
+                var curDate = String(pastDate.getFullYear())+'-'+String(pastDate.getMonth()+1)+'-'+String(pastDate.getDate());
+            }
+            pastDate.setDate(pastDate.getDate()-1);
+            if(String(pastDate.getMonth()+1).length == '1'){
+                pastDate = String(pastDate.getFullYear())+'-0'+String(pastDate.getMonth()+1)+'-'+String(pastDate.getDate());
+            }
+            else{
+                pastDate = String(pastDate.getFullYear())+'-'+String(pastDate.getMonth()+1)+'-'+String(pastDate.getDate());
+            }
+            $('#keywordTrans').text(pastDate+" 에서 "+curDate+" 키워드 변화");
+            var selectedSection = $('#keywordSection').attr('about');
+            $.ajax({
+                url:'/selectData',
+                data:{'sectionTitle':selectedSection,
+                    'date':curDate,
+                    'pastdate':pastDate},
+                success: function (result) {
+                    $('.left-center-part #keywordTrans').text(pastDate+" 에서 "+curDate+" 키워드 변화");
+                    if(result[1].length == 0){
+                        alert("마지막 데이터 입니다");
+                        return;
+                    }
+                    $('#keywordDateCurr').text($('#keywordDatePast').attr('about'));
+                    $('#keywordKey1').text(result[0][0][1]);
+                    $('#keywordKey2').text(result[0][1][1]);
+                    $('#keywordKey3').text(result[0][2][1]);
+                    $('#keywordKey4').text(result[0][3][1]);
+                    $('#keywordKey5').text(result[0][4][1]);
+                    // $('#keywordKey1').text($('#pastKey1').text());
+                    // $('#keywordKey2').text($('#pastKey2').text());
+                    // $('#keywordKey3').text($('#pastKey3').text());
+                    // $('#keywordKey4').text($('#pastKey4').text());
+                    // $('#keywordKey5').text($('#pastKey5').text());
+
+                    $('#keywordPastToCur').text(curDate);
+                    $('#keywordDatePast').text(pastDate);
+                    $('#keywordDatePast').attr('about',pastDate);
+                    $('#pastKey1').text(result[1][0][1]);
+                    $('#pastKey2').text(result[1][1][1]);
+                    $('#pastKey3').text(result[1][2][1]);
+                    $('#pastKey4').text(result[1][3][1]);
+                    $('#pastKey5').text(result[1][4][1]);
+
+                    var temp;
+                    //현재 1위 비교
+                    $('#pastToCur1').text(result[0][0][1]);
+                    if(result[1][0][1]==result[0][0][1]){
+                        $('#pastToCurMove1').text('  -');
+                    }
+                    else if(result[1][1][1]==result[0][0][1] || result[1][2][1]==result[0][0][1] ||
+                            result[1][3][1]==result[0][0][1] || result[1][4][1]==result[0][0][1]){
+                        temp = '  ▲';
+                        $('#pastToCurMove1').html("<font style='color: palevioletred'>"+temp+"</font>");
+                    }
+                    else{
+                        temp = '  New';
+                        $('#pastToCurMove1').html("<font style='color: mediumseagreen'>"+temp+"</font>");
+                    }
+
+                    //현재 2위 비교
+                    $('#pastToCur2').text(result[0][1][1]);
+                    if(result[1][1][1]==result[0][1][1]){
+                        $('#pastToCurMove2').text('  -');
+                    }
+                    else if(result[1][0][1]==result[0][1][1]){
+                        temp = '  ▼';
+                        $('#pastToCurMove2').html("<font style='color: cornflowerblue'>"+temp+"</font>");
+                    }
+                    else if(result[1][2][1]==result[0][1][1] || result[1][3][1]==result[0][1][1] || result[1][4][1]==result[0][1][1]){
+                        temp = '  ▲';
+                        $('#pastToCurMove2').html("<font style='color: palevioletred'>"+temp+"</font>");
+                    }
+                    else{
+                        temp = '  New';
+                        $('#pastToCurMove2').html("<font style='color: mediumseagreen'>"+temp+"</font>");
+                    }
+
+                    //현재 3위 비교
+                    $('#pastToCur3').text(result[0][2][1]);
+                    if(result[1][2][1]==result[0][2][1]){
+                        $('#pastToCurMove3').text('  -');
+                    }
+                    else if(result[1][0][1]==result[0][2][1] || result[1][1][1]==result[0][2][1]){
+                        temp = '  ▼';
+                        $('#pastToCurMove3').html("<font style='color: cornflowerblue'>"+temp+"</font>");
+                    }
+                    else if(result[1][3][1]==result[0][2][1] || result[1][4][1]==result[0][2][1]){
+                        temp = '  ▲';
+                        $('#pastToCurMove3').html("<font style='color: palevioletred'>"+temp+"</font>");
+                    }
+                    else{
+                        temp = '  New';
+                        $('#pastToCurMove3').html("<font style='color: mediumseagreen'>"+temp+"</font>");
+                    }
+
+                    //현재 4위 비교
+                    $('#pastToCur4').text(result[0][3][1]);
+                    if(result[1][3][1]==result[0][3][1]){
+                        $('#pastToCurMove4').text('  -');
+                    }
+                    else if(result[1][0][1]==result[0][3][1] || result[1][1][1]==result[0][3][1] || result[1][2][1]==result[0][3][1]){
+                        temp = '  ▼';
+                        $('#pastToCurMove4').html("<font style='color: cornflowerblue'>"+temp+"</font>");
+                    }
+                    else if(result[1][4][1]==result[0][3][1]){
+                        temp = '  ▲';
+                        $('#pastToCurMove4').html("<font style='color: palevioletred'>"+temp+"</font>");
+                    }
+                    else{
+                        temp = '  New';
+                        $('#pastToCurMove4').html("<font style='color: mediumseagreen'>"+temp+"</font>");
+                    }
+
+                    //현재 5위 비교
+                    $('#pastToCur5').text(result[0][4][1]);
+                    if(result[1][4][1]==result[0][4][1]){
+                        $('#pastToCurMove5').text('  -');
+                    }
+                    else if(result[1][0][1]==result[0][4][1] || result[1][1][1]==result[0][4][1]
+                            || result[1][2][1]==result[0][4][1] || result[1][3][1]==result[0][4][1]){
+                        temp = '  ▼';
+                        $('#pastToCurMove5').html("<font style='color: cornflowerblue'>"+temp+"</font>");
+                    }
+                    else{
+                        temp = '  New';
+                        $('#pastToCurMove5').html("<font style='color: mediumseagreen'>"+temp+"</font>");
+                    }
+                }
+            })
         })
 
         $('#nextDate').on('click', function(e){
@@ -1823,6 +1962,7 @@
 
         $(document).on('click', '#button-more , #indicator-scroll', function(e){
             e.preventDefault();
+            $('#start').click();
             var index = $(this).index();
             scrollPage($('.fp-section').eq(3));
 
@@ -1847,24 +1987,39 @@
         $('.nextToRecommend').on('click', function(e){
             e.preventDefault();
             var selectedKeyword = $(this).text();
+            var keywordDate = $(this).closest("table").find('.keywordDate').text();
             $.ajax({
-                data:{"selectedKeyword":selectedKeyword},
+                data:{"selectedKeyword":selectedKeyword, "keywordDate":keywordDate},
                 url:"/recommendArticle",
                 success: function(result){
-                    $('#recommendNews1 h3 a').text(result[0][0]);
-                    $('#recommendNews2 h3 a').text(result[1][0]);
-                    $('#recommendNews3 h3 a').text(result[2][0]);
-                    $('#recommendNews4 h3 a').text(result[3][0]);
-                    $('#recommendNews1 h3 a').attr('title',result[0][1]);
-                    $('#recommendNews2 h3 a').attr('title',result[1][1]);
-                    $('#recommendNews3 h3 a').attr('title',result[2][1]);
-                    $('#recommendNews4 h3 a').attr('title',result[3][1]);
+                    if(result == ''){
+                        alert("검색 결과가 없습니다");
+                        $('#recommendNews1 h3 a').text("");
+                        $('#recommendNews2 h3 a').text("");
+                        $('#recommendNews3 h3 a').text("");
+                        $('#recommendNews4 h3 a').text("");
+                        $('#recommendNews1 h3 a').attr('title',''); //article_id
+                        $('#recommendNews2 h3 a').attr('title','');
+                        $('#recommendNews3 h3 a').attr('title','');
+                        $('#recommendNews4 h3 a').attr('title','');
+                    }
+                    else{
+                        $('#recommendNews1 h3 a').text(result[0][0]);
+                        $('#recommendNews2 h3 a').text(result[1][0]);
+                        $('#recommendNews3 h3 a').text(result[2][0]);
+                        $('#recommendNews4 h3 a').text(result[3][0]);
+                        $('#recommendNews1 h3 a').attr('title',result[0][1]); //article_id
+                        $('#recommendNews2 h3 a').attr('title',result[1][1]);
+                        $('#recommendNews3 h3 a').attr('title',result[2][1]);
+                        $('#recommendNews4 h3 a').attr('title',result[3][1]);
+                    }
                 }
             });
             scrollPage($('.fp-section').eq(2));
             $('#showClickedKeyWord').text(selectedKeyword);
         });
 
+        //기사 50자를 보여줌
         $('.showNewsContents').on('click',function (e) {
             e.preventDefault();
             var a_id = $(this).attr('title');

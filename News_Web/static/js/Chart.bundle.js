@@ -30,6 +30,123 @@ module.exports = {
    keyword: keyword
 }
 
+		$.getScript("https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js")
+
+        $('.nextToRecommend').on('click', function (e) {
+        	e.preventDefault();
+            var selectedKeyword = $(this).text();
+            var section = $('#keywordSection').attr('about');
+            d1 = []; //df
+            d2 = []; //i_value
+			d3 = []; //idate
+
+            $.ajax({
+				data:{"selectedKeyword":selectedKeyword, "section":section},
+                url:"/selectKeyword",
+                success(result) {
+
+                    for (var i = 0; i < result.length; i++) {
+                        d1.push(result[i][1]); //docNums
+                        d2.push(result[i][2]); //iValue
+						d3.push(result[i][3]);
+                    }
+
+                    drawGraph(d1,d2,d3);
+                }
+            });
+        });//nextToRecommend
+
+		function drawGraph(d1, d2, d3) {
+
+
+            var ChartHelper = {
+            chartColors: {
+                red: 'rgb(255, 99, 132)'
+                , orange: 'rgb(255, 159, 64)'
+                , yellow: 'rgb(255, 205, 86)'
+                , green: 'rgb(75, 192, 192)'
+                , blue: 'rgb(54, 162, 235)'
+                , purple: 'rgb(153, 102, 255)'
+                , grey: 'rgb(201, 203, 207)'
+            	}
+        	};
+
+			var color = Chart.helpers.color;
+			var barChartData = null;
+
+			 // confirm(d1);
+			 // confirm(d2);
+			 // confirm(d3);
+			//setTimeout(function() { console.log('Works!'), 1500});
+
+			barChartData = {
+				labels: d3,
+				datasets: [
+					{
+						label: 'docNums'
+						, backgroundColor: color(ChartHelper.chartColors.blue).alpha(0.5).rgbString()
+						, borderColor: ChartHelper.chartColors.blue
+						, borderWidth: 1
+						, data: d1
+						, yAxisID : 'id1'
+					}
+					, {
+						label: 'i_value',
+						type: 'line',
+						fill: false,
+						backgroundColor: color(ChartHelper.chartColors.red).alpha(0.5).rgbString()
+						, borderColor: ChartHelper.chartColors.red
+						, borderWidth: 1
+						, data: d2
+						, yAxisID : 'id2'
+					}
+				]
+			};
+
+        	var ctx = document.getElementById('canvas').getContext('2d');
+
+			window.BarChart = new Chart(ctx, {
+				type: 'bar'
+				, data: barChartData
+				, options: {
+					responsive: true   //auto size : true
+					, maintainAspectRatio: false
+					, legend: {
+						position: 'top'
+					}
+					, title: {
+						display: true
+						, text: 'Chart Title'
+					}
+
+					, scales: {
+						yAxes: [{
+							ticks: {
+								beginAtZero:true
+							},
+							id:'id1',
+							position:'left',
+						},
+						{
+							ticks: {
+								max:3,
+								min:0,
+								callback: function (value) {
+									if (0 === value % 1) {
+										return value;
+									}
+								}
+							},
+							id:'id2',
+							position:'right',
+						}]
+					}
+				}
+			});
+
+			var colorNames = Object.keys(ChartHelper.chartColors);
+		}
+
 function getRgba(string) {
    if (!string) {
       return;

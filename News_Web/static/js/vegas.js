@@ -13,9 +13,10 @@ $(document).ready(function(){
 
     $('.slideshow-home').vegas({
         slides: [
-            { src: 'static/img/the_newspaper.jpg' },
-            { src: 'static/img/the_newspaper_2.jpg' },
             { src: 'static/img/the_newspaper_3.jpg' },
+            { src: 'static/img/the_newspaper_2.jpg' },
+            { src: 'static/img/the_newspaper_1.jpg' },
+            { src: 'static/img/the_newspaper_0.jpg' }
         ],
 
         // Delay beetween slides in milliseconds.

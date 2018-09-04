@@ -11,26 +11,45 @@
 $(document).ready(function(){
     "use strict";
 
-    $('.slideshow-home').vegas({
+    $('.slideshow-home-left').vegas({
         slides: [
-            { src: 'static/img/the_newspaper_3.jpg' },
-            { src: 'static/img/the_newspaper_2.jpg' },
-            { src: 'static/img/the_newspaper_1.jpg' },
-            { src: 'static/img/the_newspaper_0.jpg' }
+            { src: 'img/left-1.jpg' },
+            { src: 'img/left-2.jpg' },
+            { src: 'img/left-3.jpg' },
         ],
 
         // Delay beetween slides in milliseconds.
         delay: 5000,
 
         // Chose your transition effect (See the documentation provided in your download pack)
-        transition: 'fade'
+        transition: 'slideRight',
+
+        align:              'top',
+        valign:             'right',
+    });
+
+    $('.slideshow-home-right').vegas({
+        slides: [
+            { src: 'img/right-1.jpg' },
+            { src: 'img/right-2.jpg' },
+            { src: 'img/right-3.jpg' },
+        ],
+
+        // Delay beetween slides in milliseconds.
+        delay: 5000,
+
+        // Chose your transition effect (See the documentation provided in your download pack)
+        transition: 'slideLeft',
+
+        align:              'top',
+        valign:             'left',
     });
 
     $('.slideshow-about').vegas({
         slides: [
-            { src: 'static/img/slide-1.jpg' },
-            { src: 'static/img/slide-2.jpg' },
-            { src: 'static/img/slide-3.jpg' },
+            { src: 'img/slide-1.jpg' },
+            { src: 'img/slide-2.jpg' },
+            { src: 'img/slide-3.jpg' },
         ],
 
         // Delay beetween slides in milliseconds.
@@ -53,7 +72,7 @@ $(document).ready(function(){
         // Chose your transition effect (See the documentation provided in your download pack)
         transition: 'fade'
     });
-
+    
 });
 
 (function ($) {
